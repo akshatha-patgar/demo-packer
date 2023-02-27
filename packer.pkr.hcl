@@ -12,8 +12,8 @@ source "amazon-ebs" "custom-ami" {
   region        = "us-east-1"
   source_ami    = "ami-0dfcb1ef8550277af"
   ssh_username  = "ec2-user"
-  access_key    = "AKIA4OCIWAYFHOZNHRES"
-  secret_key    = "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"
+  access_key    = "AKIAZLY726NU3WHVCZUR"
+  secret_key    = "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"
   #profile       = "aws-profile-name"
   skip_region_validation = "true"
   tags = {
