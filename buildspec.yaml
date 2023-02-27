@@ -12,7 +12,7 @@ phases:
   pre_build:
     commands:
       - echo "Updating the repository"
-      - apt-get update -y
+      - yum update -y
       - echo "Packer init"
       - ./packer init -upgrade packer.pkr.hcl
       - echo "Validating the Packer template"
