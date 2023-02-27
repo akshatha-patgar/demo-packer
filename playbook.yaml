@@ -1,15 +1,14 @@
 ---
 - name: Packer Demo with Ansible Provisioner
   hosts: all
-  become: true
   vars_files: 
     - packages.yaml
   tasks:
-  - name: Update the apt repository
-    apt:
+  - name: Update the yum repository
+    yum:
       update_cache: yes
   - name: Dependencies installation
-    apt:
+    yum:
       name: "{{ item }}"
       state: present
     loop: "{{ packages }}"
