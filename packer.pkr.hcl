@@ -10,7 +10,7 @@ source "amazon-ebs" "custom-ami" {
   ami_name      = "custom-ami"
   instance_type = "t2.micro"
   region        = "us-east-1"
-  source_ami    = "ami-0cd7323ab3e63805f"
+  source_ami    = "ami-0dfcb1ef8550277af"
   ssh_username  = "ec2-user"
   access_key    = "AKIA4OCIWAYFHOZNHRES"
   secret_key    = "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"
