@@ -10,9 +10,11 @@ source "amazon-ebs" "custom-ami" {
   ami_name      = "custom-ami"
   instance_type = "t2.micro"
   region        = "us-east-1"
-  source_ami    = "ami-08c40ec9ead489470"
-  ssh_username  = "ubuntu"
-  profile       = "aws-profile-name"
+  source_ami    = "ami-0cd7323ab3e63805f"
+  ssh_username  = "ec2-user"
+  access_key    = "AKIA4OCIWAYFHOZNHRES"
+  secret_key    = "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"
+  #profile       = "aws-profile-name"
   skip_region_validation = "true"
   tags = {
     Name = "custom-ami"
@@ -23,7 +25,7 @@ build {
 
   provisioner "ansible" {
     playbook_file = "./playbook.yaml"
-    user          = "ubuntu"
+    user          = "ec2-user"
   }
 
 }
